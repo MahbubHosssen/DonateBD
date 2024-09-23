@@ -4,7 +4,10 @@ const footerContainer = document.getElementById("footer")
 
 const donateShowBtn = document.getElementById("donate-show-btn")
 const historyShowBtn = document.getElementById("history-show-btn")
-// console.log(donateShowBtn)
+const blogBtn = document.getElementById("blog-btn")
+blogBtn.addEventListener("click", function(){
+    window.location.href = "/blog.html"
+})
 
 
 
@@ -39,8 +42,10 @@ for(const btn of sectionDonateBtnAll){
         document.getElementById("main-account-balance").innerText = availableBalance;
 
         const div = document.createElement("div")
+        div.classList.add("border", "rounded-lg", "p-6", "my-4")
         div.innerHTML = `
-            <h4 class="text-xl font-semibold">${inputNumber} Taka is ${title}</h4>
+            <h4 class="text-xl font-semibold mb-4">${inputNumber} Taka is ${title}</h4>
+            <p class="text-gray-500">Date: ${new Date()}</p>
         `
         historyContainer.appendChild(div)
     })
@@ -53,7 +58,6 @@ historyShowBtn.addEventListener("click", function(){
     historyShowBtn.classList.remove("bg-transparent","text-gray-500")
     historyShowBtn.classList.add("bg-lime-400")
     donateShowBtn.classList.add("bg-transparent")
-    footerContainer.classList.add("absolute", "bottom-0")
 
     mainContainer.classList.add("hidden")
     historyContainer.classList.remove("hidden")
@@ -63,7 +67,6 @@ donateShowBtn.addEventListener("click",function(){
     donateShowBtn.classList.remove("bg-transparent")
     donateShowBtn.classList.add("bg-lime-400")
     historyShowBtn.classList.add("bg-transparent","text-gray-500")
-    footerContainer.classList.remove("absolute", "bottom-0")
 
     historyContainer.classList.add("hidden")
     mainContainer.classList.remove("hidden")
