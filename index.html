@@ -9,12 +9,14 @@
     <!-- Tailwind and DaisyUI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://kit.fontawesome.com/290838e588.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Nav Items -->
-    <section class="bg-[#F9F7F3] py-8">
-        <header class="w-10/12 mx-auto">
-            <nav class="flex justify-between items-center">
+    <section class="sticky top-0 backdrop-blur-md "> <!-- Added backdrop-blur-md for blur effect -->
+        <header class="bg-[#F9F7F3] bg-opacity-20 py-8">
+            <nav class="flex justify-between items-center w-10/12 mx-auto">
                 <button id="blog-btn" class="btn bg-lime-400 w-[100px]">Blog</button>
                 <div class="hidden sm:flex gap-3 items-center">
                     <img src="./assets/logo.png" alt="">
@@ -26,15 +28,17 @@
                 </div>
             </nav>
         </header>
+    
+        <!-- Buttons -->
+        <div class="bg-transparent backdrop-blur-md py-4"> <!-- Also added backdrop-blur-md here -->
+            <div class="text-center space-x-4">
+                <button class="btn bg-lime-400 text-lg font-semibold" id="donate-show-btn" >Donation</button>
+                <button class="btn bg-gray-100 text-lg font-semibold text-gray-500" id="history-show-btn">History</button>
+            </div>
+        </div>
     </section>
 
-    <!-- Buttons -->
-    <div class="buttons mx-auto mt-16 mb-8">
-        <div class="text-center space-x-4">
-            <button class="btn bg-lime-400 text-lg font-semibold" id="donate-show-btn" >Donation</button>
-            <button class="btn bg-transparent text-lg font-semibold text-gray-500" id="history-show-btn">History</button>
-        </div>
-    </div>
+    
 
     <!-- Main Section -->
     <main id="main-container" class="space-y-6">

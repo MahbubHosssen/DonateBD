@@ -6,11 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DonateBD Blog</title>
 
+    <!-- Font Awsome CDN -->
+    <script src="https://kit.fontawesome.com/290838e588.js" crossorigin="anonymous"></script>
+
     <!-- Tailwind and DaisyUI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    
 </head>
 <body>
-    <h1>Show blog html</h1>
+    <section class="bg-[#F9F7F3] py-8">
+        <header class="w-10/12 mx-auto">
+            <nav class="flex justify-between items-center">
+                <button id="home-btn" class="btn bg-lime-400 w-[100px]">Home</button>
+                <div class="hidden sm:flex gap-3 items-center">
+                    <img src="./assets/logo.png" alt="">
+                    <p class="font-semibold text-xl">DonateBD</p>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <img src="./assets/coin.png" alt="">
+                    <p class="text-gray-500 text-lg font-semibold"><span id="main-account-balance">5000</span> BDT</p>
+                </div>
+            </nav>
+        </header>
+    </section>
+
+    <section class="w-10/12 mx-auto">
+        <div class="flex my-6 space-x-2">
+            <h1 class="text-3xl font-semibold mt-3">Important FAQ</h1>
+            <img id="icon" class="ease-in-out w-[36px] h-[36px]" src="./assets/ask.png" alt="">
+        </div>
+
+        <!-- Accordion Container -->
+        <div class="space-y-3">
+            <!-- Accordion Item 1 -->
+            <div class="p-6 border">
+                <!-- Accordion Btn -->
+                <div class="accordion-btn flex justify-between cursor-pointer">
+                    <p class="text-xl font-semibold">What is the document object Model (DOM)?</p>
+                    <div class="text-xl">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+                <!-- Accordion Description -->
+                <div class="hidden">
+                    <p class="text-gray-500 mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate nihil ipsam, nulla exercitationem inventore atque. Alias labore voluptas recusandae?</p>
+                </div>
+            </div>
+            <!-- max-h-0 overflow-hidden transition-[max-height] ease-out -->
+            <!-- Accordion Item 2 -->
+            <div class="p-6 border">
+                <!-- Accordion Btn -->
+                <div class="accordion-btn flex justify-between cursor-pointer">
+                    <p class="text-xl font-semibold cursor-pointer">How Do you select an element from the DOM?</p>
+                    <div class="text-xl">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+                <!-- Accordion Description -->
+                <div class="hidden">
+                    <p class="text-gray-500 mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate nihil ipsam, nulla exercitationem inventore atque. Alias labore voluptas recusandae?</p>
+                </div>
+            </div>
+
+            <!-- Accordion Item 3-->
+            <div class="p-6 border">
+                <!-- Accordion Btn -->
+                <div class="accordion-btn flex justify-between cursor-pointer">
+                    <p class="text-xl font-semibold cursor-pointer">What is event deligation in the contex of the DOM, and why is it useful?</p>
+                    <div class="text-xl">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+                <!-- Accordion Description -->
+                <div class="hidden">
+                    <p class="text-gray-500 mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate nihil ipsam, nulla exercitationem inventore atque. Alias labore voluptas recusandae?</p>
+                </div>
+            </div>
+
+            <!-- Accordion Item 4-->
+            <div class="p-6 border">
+                <!-- Accordion Btn -->
+                <div class="accordion-btn flex justify-between cursor-pointer">
+                    <p class="text-xl font-semibold cursor-pointer">How do you manipulate an elements attributes and styles using the DOM?</p>
+                    <div class="text-xl">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+                <!-- Accordion Description -->
+                <div class="hidden">
+                    <p class="text-gray-500 mt-2  ease-in-out">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate nihil ipsam, nulla exercitationem inventore atque. Alias labore voluptas recusandae?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/blog.js"></script>
 </body>
 </html>

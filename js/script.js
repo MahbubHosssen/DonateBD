@@ -5,6 +5,7 @@ const footerContainer = document.getElementById("footer")
 const donateShowBtn = document.getElementById("donate-show-btn")
 const historyShowBtn = document.getElementById("history-show-btn")
 const blogBtn = document.getElementById("blog-btn")
+
 blogBtn.addEventListener("click", function(){
     window.location.href = "/blog.html"
 })
