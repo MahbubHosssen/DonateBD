@@ -1,6 +1,6 @@
 const homeBtn = document.getElementById("home-btn")
 homeBtn.addEventListener("click", function(){
-    window.location.href = "/blog.html"
+    window.location.href = "index.html"
 })
 
 const accordionBtns = document.querySelectorAll(".accordion-btn")
