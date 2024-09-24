@@ -6,22 +6,21 @@ const donateShowBtn = document.getElementById("donate-show-btn")
 const historyShowBtn = document.getElementById("history-show-btn")
 const blogBtn = document.getElementById("blog-btn")
 
+// Location change
 blogBtn.addEventListener("click", function(){
     window.location.href = "blog.html";
 })
 
-
-
+// Document functionality
 const sectionDonateBtnAll = document.querySelectorAll(".section-donate-btn")
 for(const btn of sectionDonateBtnAll){
     btn.addEventListener("click", function(){
         let input = btn.parentNode.previousElementSibling.children[0].value
-        let inputNumber = parseFloat(input);
+        let inputNumber = Number(input);
         let sectionMoney = btn.parentNode.parentNode.children[0].children[1].firstChild.innerText;
         let sectionMoneyNumber = parseFloat(sectionMoney)
         let sectionMoneyTag = btn.parentNode.parentNode.children[0].children[1].firstChild;
         let title = btn.parentNode.previousElementSibling.previousElementSibling.children[0].innerText
-        console.log(typeof inputNumber)
 
         if(isNaN(inputNumber)  || inputNumber <= 0){
             alert("Donation is invalid amount")
@@ -59,7 +58,7 @@ historyShowBtn.addEventListener("click", function(){
 
     mainContainer.classList.add("hidden")
     historyContainer.classList.remove("hidden")
-    footerContainer.classList.add("hidden")
+    footerContainer.classList.add("absolute", "bottom-0")
 })
 
 donateShowBtn.addEventListener("click",function(){
@@ -69,9 +68,9 @@ donateShowBtn.addEventListener("click",function(){
 
     historyContainer.classList.add("hidden")
     mainContainer.classList.remove("hidden")
-    footerContainer.classList.remove("hidden")
-})
+    footerContainer.classList.remove("absolute", "bottom-0")
 
+})
 
 //* getTextValueById
 function getTextValueById(id){
