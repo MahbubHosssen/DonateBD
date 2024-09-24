@@ -14,10 +14,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+    .lexend-font {
+        font-family: "Lexend", sans-serif;
+        font-style: normal;
+      }
+    </style>
 </head>
-<body>
-    <section class="sticky top-0 backdrop-blur-lg"> <!-- Added consistent backdrop-blur-md and bg-opacity -->
-        <header class="bg-[#F9F7F3]  py-8 bg-opacity-70"> <!-- Applied same opacity and blur -->
+<body class="lexend-font">
+    <section class="sticky top-0 backdrop-blur-lg">
+        <header class="bg-[#F9F7F3]  py-8 bg-opacity-70">
             <nav class="flex justify-between items-center w-10/12 mx-auto">
                 <button id="home-btn" class="btn bg-lime-400 w-[100px]">Home</button>
                 <div class="hidden sm:flex gap-3 items-center">
@@ -44,7 +55,7 @@
             <div class="p-6 border">
                 <!-- Accordion Btn -->
                 <div class="accordion-btn flex justify-between cursor-pointer">
-                    <p class="text-xl font-semibold">What is the document object Model (DOM)?</p>
+                    <p class="text-lg font-semibold">What is the document object Model (DOM)?</p>
                     <div class="text-xl">
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
