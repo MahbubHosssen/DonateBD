@@ -58,7 +58,6 @@ historyShowBtn.addEventListener("click", function(){
 
     mainContainer.classList.add("hidden")
     historyContainer.classList.remove("hidden")
-    historyContainer.classList.add("h-screen")
 })
 
 donateShowBtn.addEventListener("click",function(){
@@ -68,7 +67,6 @@ donateShowBtn.addEventListener("click",function(){
 
     historyContainer.classList.add("hidden")
     mainContainer.classList.remove("hidden")
-    historyContainer.classList.remove("h-screen")
 
 })
 
